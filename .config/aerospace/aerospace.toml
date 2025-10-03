@@ -1,9 +1,12 @@
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
+# Run Sketchybar together with AeroSpace
+# sketchbar has a built-in detection of already running process,
+# so it won't be run twice on AeroSpace restart
+# after-startup-command = ['exec-and-forget sketchybar']
 
-# You can use it to add commands that run after AeroSpace startup.
-# Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# Notify Sketchybar about workspace change
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -51,12 +54,26 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 0
-    inner.vertical =   0
-    outer.left =       0
-    outer.bottom =     0
-    outer.top =        0
-    outer.right =      0
+    # inner.horizontal = 20
+    # inner.vertical =   20
+    # outer.left =       80
+    # outer.bottom =     20
+    # outer.top =        10
+    # outer.right =      20
+
+    inner.horizontal = 18
+    inner.vertical =   18
+    outer.left =       18
+    outer.bottom =     18
+    outer.top =        18
+    outer.right =      18
+
+    # inner.horizontal = 0
+    # inner.vertical =   0
+    # outer.left =       0
+    # outer.bottom =     0
+    # outer.top =        0
+    # outer.right =      0
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

@@ -187,4 +187,61 @@ local transparentCatppuccin = {
 -- 	},
 -- }
 
-return transparentTokyoNightMoon
+-- return transparentTokyoNightMoon
+
+-- return {
+-- 	{ "catppuccin/nvim" },
+-- 	{
+-- 		"LazyVim/LazyVim",
+-- 		opts = {
+-- 			colorscheme = "catppuccin",
+-- 		},
+-- 	},
+-- }
+
+-- return {
+-- 	{
+-- 		"rose-pine/neovim",
+-- 		name = "rose-pine",
+-- 		opts = {
+-- 			variant = "main",
+-- 			palette = {
+-- 				-- Override the builtin palette per variant
+-- 				main = {
+-- 					base = "#1C1A28",
+-- 					-- overlay = '#363738',
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- 	{
+-- 		"LazyVim/LazyVim",
+-- 		opts = {
+-- 			colorscheme = "rose-pine",
+-- 		},
+-- 	},
+-- }
+
+return {
+	{
+		"rebelot/kanagawa.nvim",
+		name = "kanagawa",
+		opts = {
+			colors = {
+				theme = {
+					all = {
+						ui = {
+							bg_gutter = "none",
+						},
+					},
+				},
+			},
+		},
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "kanagawa",
+		},
+	},
+}

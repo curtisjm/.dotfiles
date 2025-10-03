@@ -115,3 +115,24 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="/Library/TeX/texbin:$PATH"
+
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+
+
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+man 2 select
+
+# alias cd="z"
+cd() {
+  z "$@"
+  eza -l
+}
+alias cat="bat"
+alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
+alias ls="eza"
+alias grep="rg"
+
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+neofetch

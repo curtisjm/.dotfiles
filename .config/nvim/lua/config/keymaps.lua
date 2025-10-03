@@ -46,3 +46,6 @@ vim.keymap.set("n", "<leader>ub", "<Nop>")
 if vim.lsp.inlay_hint then
 	vim.keymap.set("n", "<leader>uh", "<Nop>")
 end
+
+-- Restart LSP
+vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>", { desc = "LSP Restart" })
